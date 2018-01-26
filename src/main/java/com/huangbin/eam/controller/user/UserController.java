@@ -26,7 +26,7 @@ public class UserController extends BaseController {
     /**
      * @return 查询所有的用户信息
      */
-    @RequestMapping(value = "/findAll", method = RequestMethod.GET)
+    @RequestMapping(value = "/", method = RequestMethod.GET)
     public List<User> findAll() {
         return userService.findAll();
     }
@@ -35,7 +35,7 @@ public class UserController extends BaseController {
     /**
      * @return 查询所有的用户信息
      */
-    @RequestMapping(value = "/findById/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public User findById(@PathVariable Long id) {
         return userService.findById(id);
     }
