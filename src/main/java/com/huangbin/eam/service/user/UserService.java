@@ -12,15 +12,34 @@ import java.util.List;
  */
 @Service
 public class UserService implements IUserService {
+    static List<User> userList;
+
+    static {
+        userList = new ArrayList<>();
+        for (int i = 0; i < 10; i++) {
+            userList.add(new User((long) (i + 1), "user" + i, "123456", "1"));
+        }
+    }
 
 
     @Override
     public List<User> findAll() {
-        List<User> userList = new ArrayList<>();
-        for (int i = 0; i < 10; i++) {
 
-            userList.add(new User((long) (i + 1), "user" + i, "123456", "1"));
-        }
         return userList;
+    }
+
+    /**
+     * @param id 用户ID
+     * @return 根据用户id查询
+     */
+    @Override
+    public User findById(Long id) {
+        User user = null;
+        for (User u : userList) {
+            if (u.getId() == id) {
+                user = u;
+            }
+        }
+        return user;
     }
 }

@@ -13,4 +13,10 @@ public interface IUserService {
      * @return 查询所有的用户
      */
     List<User> findAll();
+
+    /**
+     * @param id
+     * @return 根据ID查询用户
+     */
+    User findById(Long id);
 }
