@@ -1,4 +1,4 @@
-package com.huangbin.eam.controller.base;
+package com.huangbin.gsarts.controller.base;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

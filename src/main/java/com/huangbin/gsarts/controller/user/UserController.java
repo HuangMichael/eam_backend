@@ -1,9 +1,9 @@
-package com.huangbin.eam.controller.user;
+package com.huangbin.gsarts.controller.user;
 
 
-import com.huangbin.eam.controller.base.BaseController;
-import com.huangbin.eam.model.user.User;
-import com.huangbin.eam.service.user.IUserService;
+import com.huangbin.gsarts.controller.base.BaseController;
+import com.huangbin.gsarts.model.user.User;
+import com.huangbin.gsarts.service.user.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;

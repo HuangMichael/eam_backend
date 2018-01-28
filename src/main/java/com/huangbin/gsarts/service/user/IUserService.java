@@ -1,6 +1,6 @@
-package com.huangbin.eam.service.user;
+package com.huangbin.gsarts.service.user;
 
-import com.huangbin.eam.model.user.User;
+import com.huangbin.gsarts.model.user.User;
 
 import java.util.List;
 

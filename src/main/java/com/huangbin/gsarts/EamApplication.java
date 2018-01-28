@@ -1,4 +1,4 @@
-package com.huangbin.eam;
+package com.huangbin.gsarts;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

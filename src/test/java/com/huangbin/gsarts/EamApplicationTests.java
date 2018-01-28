@@ -1,4 +1,4 @@
-package com.huangbin.eam;
+package com.huangbin.gsarts;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,4 +1,4 @@
-package com.huangbin.eam.model.user;
+package com.huangbin.gsarts.model.user;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
