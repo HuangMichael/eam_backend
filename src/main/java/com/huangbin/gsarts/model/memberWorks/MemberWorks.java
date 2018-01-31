@@ -31,11 +31,8 @@ public class MemberWorks implements Serializable {
     @Column(length = 50, nullable = false)
     private String name;//作品名称
 
-    @Column(length = 1, nullable = false, columnDefinition = "default '0'")
+    @Column(length = 1, nullable = false)
     private String isFocus;//是否焦点作品
-
-    @Column(length = 20, nullable = false)
-    private String cardNo; //会员证号
 
     @Column(length = 1)
     private String memberType;//会员类型
@@ -48,6 +45,6 @@ public class MemberWorks implements Serializable {
 
     private Long sortNo;
 
-    @Column(length = 1, nullable = false, columnDefinition = "default 1")
+    @Column(length = 1, nullable = false)
     private String status;
 }
