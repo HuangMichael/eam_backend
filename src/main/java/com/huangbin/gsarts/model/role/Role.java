@@ -1,24 +1,24 @@
-package com.huangbin.gsarts.model.user;
+package com.huangbin.gsarts.model.role;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
+import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.io.Serializable;
 
-
+/**
+ * 角色信息
+ */
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
-public class User implements Serializable {
+public class Role implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String userName;
-    private String password;
+    @Column(length = 20, nullable = false)
+    private String name;
+    private Long sortNo;
+    @Column(length = 1, nullable = false)
     private String status;
-
 }
