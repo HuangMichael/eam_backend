@@ -4,12 +4,11 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
 
-
+@Entity
+@Table(name = "T_UNIT")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -20,5 +19,4 @@ public class User implements Serializable {
     private String userName;
     private String password;
     private String status;
-
 }

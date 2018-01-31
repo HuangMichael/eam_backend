@@ -1,4 +1,4 @@
-package com.huangbin.gsarts.model.role;
+package com.huangbin.gsarts.model.member;
 
 import lombok.Data;
 
@@ -6,12 +6,12 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 /**
- * 角色信息
+ * 会员信息
  */
 @Entity
-@Table(name = "T_ROLE")
+@Table(name = "T_MEMBER")
 @Data
-public class Role implements Serializable{
+public class Member implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
