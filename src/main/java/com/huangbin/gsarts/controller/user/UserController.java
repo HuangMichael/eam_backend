@@ -22,7 +22,6 @@ public class UserController extends BaseController {
     @Autowired
     UserService userService;
 
-
     /**
      * @return 查询所有的用户信息
      */
