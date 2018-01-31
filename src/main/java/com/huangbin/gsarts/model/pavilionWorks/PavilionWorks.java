@@ -12,7 +12,7 @@ import java.util.Date;
  * 展馆作品信息
  */
 @Entity
-@Table(name = "T_PAVILION_AUTHOR")
+@Table(name = "T_PAVILION_WORKS")
 @Data
 public class PavilionWorks implements Serializable {
     @Id
