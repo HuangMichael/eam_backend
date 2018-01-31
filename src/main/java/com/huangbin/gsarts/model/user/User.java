@@ -1,9 +1,7 @@
 package com.huangbin.gsarts.model.user;
 
 import com.huangbin.gsarts.model.role.Role;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -12,8 +10,6 @@ import java.util.List;
 @Entity
 @Table(name = "T_USER")
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
 public class User implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

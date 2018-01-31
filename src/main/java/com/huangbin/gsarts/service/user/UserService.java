@@ -1,7 +1,9 @@
 package com.huangbin.gsarts.service.user;
 
 
+import com.huangbin.gsarts.dao.user.UserRepository;
 import com.huangbin.gsarts.model.user.User;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -11,35 +13,25 @@ import java.util.List;
  * 用户信息服务
  */
 @Service
-public class UserService implements IUserService {
-    static List<User> userList;
-
-    static {
-        userList = new ArrayList<>();
-        for (int i = 0; i < 10; i++) {
-            userList.add(new User((long) (i + 1), "user" + i, "123456", "1"));
-        }
-    }
+public class UserService {
 
 
-    @Override
+    @Autowired
+    UserRepository userRepository;
+
+    /**
+     * @return
+     */
     public List<User> findAll() {
-
-        return userList;
+        return userRepository.findAll();
     }
+
 
     /**
      * @param id 用户ID
      * @return 根据用户id查询
      */
-    @Override
     public User findById(Long id) {
-        User user = null;
-        for (User u : userList) {
-            if (u.getId() == id) {
-                user = u;
-            }
-        }
-        return user;
+        return userRepository.findById(id);
     }
 }

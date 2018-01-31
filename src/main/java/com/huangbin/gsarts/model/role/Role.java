@@ -2,7 +2,7 @@ package com.huangbin.gsarts.model.role;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.huangbin.gsarts.model.user.User;
-import lombok.Data;
+import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -14,6 +14,8 @@ import java.util.List;
 @Entity
 @Table(name = "T_ROLE")
 @Data
+@Setter
+@Getter
 public class Role implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

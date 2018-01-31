@@ -1,13 +1,16 @@
-package com.huangbin.gsarts.service.user;
+package com.huangbin.gsarts.dao.user;
 
 import com.huangbin.gsarts.model.user.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 /**
  * 用户信息接口
  */
-public interface IUserService {
+@Repository
+public interface UserRepository extends JpaRepository<User, Long> {
 
     /**
      * @return 查询所有的用户
