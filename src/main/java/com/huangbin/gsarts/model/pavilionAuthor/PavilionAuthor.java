@@ -30,6 +30,6 @@ public class PavilionAuthor implements Serializable {
 
     private Long sortNo;
 
-    @Column(length = 1, nullable = false, columnDefinition = "default 1")
+    @Column(length = 1, nullable = false)
     private String status;//状态
 }

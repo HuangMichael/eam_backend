@@ -1,11 +1,13 @@
 package com.huangbin.gsarts.model.user;
 
+import com.huangbin.gsarts.model.role.Role;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 @Table(name = "T_USER")
@@ -19,4 +21,9 @@ public class User implements Serializable {
     private String userName;
     private String password;
     private String status;
+
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "t_role_user", joinColumns = {@JoinColumn(name = "user_id")}, inverseJoinColumns = {@JoinColumn(name = "role_id")})
+    private List<Role> roleList;
+
 }

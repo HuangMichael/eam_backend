@@ -1,9 +1,12 @@
 package com.huangbin.gsarts.model.role;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.huangbin.gsarts.model.user.User;
 import lombok.Data;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * 角色信息
@@ -20,4 +23,9 @@ public class Role implements Serializable{
     private Long sortNo;
     @Column(length = 1, nullable = false)
     private String status;
+
+    @JsonBackReference
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(name = "t_role_user", joinColumns = {@JoinColumn(name = "role_id")}, inverseJoinColumns = {@JoinColumn(name = "user_id")})
+    private List<User> userList;
 }
