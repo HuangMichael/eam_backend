@@ -30,8 +30,6 @@ public class SiteController extends BaseController {
     public List<Site> findAll() {
         return siteService.findAll();
     }
-
-
     /**
      * @return 查询所有的站点信息
      */
