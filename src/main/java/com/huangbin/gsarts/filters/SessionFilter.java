@@ -40,7 +40,9 @@ public class SessionFilter implements Filter {
         HttpServletRequest request = (HttpServletRequest) servletRequest;
         HttpServletResponse response = (HttpServletResponse) servletResponse;
         response.setHeader("Access-Control-Allow-Origin", "*");
-        response.setHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS, DELETE");
+        response.setHeader("Access-Control-Allow-Headers", "accept,content-type");
+        response.setHeader("Access-Control-Allow-Methods", "OPTIONS,GET,POST,DELETE,PUT");
+        filterChain.doFilter(request, response);
     }
 
     @Override

@@ -16,7 +16,7 @@ import java.util.List;
  * 用户控制器
  */
 @RestController
-@RequestMapping(value = "/user")
+@RequestMapping(value = "/api/user")
 public class UserController extends BaseController {
 
     @Autowired

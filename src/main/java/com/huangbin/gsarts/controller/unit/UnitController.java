@@ -16,7 +16,7 @@ import java.util.List;
  * 用户控制器
  */
 @RestController
-@RequestMapping(value = "/unit")
+@RequestMapping(value = "/api/unit")
 public class UnitController extends BaseController {
 
     @Autowired
