@@ -29,4 +29,13 @@ public class UnitService {
     public Unit findById(Long id) {
         return unitRepository.findById(id);
     }
+
+
+    /**
+     * @param save
+     * @return 保存单位
+     */
+    public Unit save(Unit save) {
+        return unitRepository.save(save);
+    }
 }

@@ -5,15 +5,12 @@ import com.huangbin.gsarts.controller.base.BaseController;
 import com.huangbin.gsarts.model.unit.Unit;
 import com.huangbin.gsarts.service.unit.UnitService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 /**
- * 用户控制器
+ * 单位控制器
  */
 @RestController
 @RequestMapping(value = "/api/unit")
@@ -21,8 +18,9 @@ public class UnitController extends BaseController {
 
     @Autowired
     UnitService unitService;
+
     /**
-     * @return 查询所有的用户信息
+     * @return 查询所有的单位信息
      */
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public List<Unit> findAll() {
@@ -31,11 +29,20 @@ public class UnitController extends BaseController {
 
 
     /**
-     * @return 查询所有的用户信息
+     * @return 查询所有的单位信息
      */
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public Unit findById(@PathVariable Long id) {
         return unitService.findById(id);
+    }
+
+
+    /**
+     * @return 保存的单位信息
+     */
+    @RequestMapping(value = "/{unit}", method = RequestMethod.PUT)
+    public Unit save(@RequestParam("unit") Unit unit) {
+        return unitService.save(unit);
     }
 
 
