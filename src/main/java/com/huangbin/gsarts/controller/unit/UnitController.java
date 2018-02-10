@@ -4,6 +4,7 @@ package com.huangbin.gsarts.controller.unit;
 import com.huangbin.gsarts.controller.base.BaseController;
 import com.huangbin.gsarts.model.unit.Unit;
 import com.huangbin.gsarts.service.unit.UnitService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,6 +15,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping(value = "/api/unit")
+@Slf4j
 public class UnitController extends BaseController {
 
     @Autowired
@@ -40,8 +42,9 @@ public class UnitController extends BaseController {
     /**
      * @return 保存的单位信息
      */
-    @RequestMapping(value = "/{unit}", method = RequestMethod.PUT)
+    @RequestMapping(value = "/save", method = RequestMethod.PUT)
     public Unit save(@RequestParam("unit") Unit unit) {
+        log.info("unit----------------" + unit.toString());
         return unitService.save(unit);
     }
 
