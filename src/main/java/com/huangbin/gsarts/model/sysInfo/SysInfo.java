@@ -20,8 +20,7 @@ import java.io.Serializable;
 @Data
 public class SysInfo implements Serializable {
     @Id
-    @SequenceGenerator(name = "SYS_INFO_GENERATOR", sequenceName = "SEQ_SYS_INFO", allocationSize = 1, initialValue =1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SYS_INFO_GENERATOR")
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id", length = 11, nullable = false)
     private Long id; //序号
 

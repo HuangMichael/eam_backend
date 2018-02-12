@@ -15,8 +15,7 @@ import java.io.Serializable;
 @Data
 public class SysParams implements Serializable {
     @Id
-    @SequenceGenerator(name = "SYS_PARAMS_GENERATOR", sequenceName = "SEQ_SYS_PARAMS", allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SYS_PARAMS_GENERATOR")
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id", length = 11, nullable = false)
     private Long id; //序号
 

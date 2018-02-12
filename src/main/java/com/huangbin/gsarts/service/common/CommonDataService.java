@@ -3,8 +3,6 @@ package com.huangbin.gsarts.service.common;
 
 
 import com.huangbin.gsarts.model.common.ReturnObject;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 
 /**
@@ -14,8 +12,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class CommonDataService  {
 
-    @Autowired
-    JdbcTemplate jdbcTemplate;
+
 
 
     /**

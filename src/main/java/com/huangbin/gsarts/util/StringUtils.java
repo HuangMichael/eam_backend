@@ -269,11 +269,6 @@ public class StringUtils {
         for (int i = 0; i < array.length - 1; i++) {
             url += array[i] + "/";
         }
-//        try {
-//            fileName = new String((url + fileName).getBytes(FTPUploader.LOCAL_CHARSET), FTPUploader.SERVER_CHARSET);
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
         log.info(fileName);
 
         fileName = url + fileName;
