@@ -4,12 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.huangbin.gsarts</groupId>
-	<artifactId>eam</artifactId>
+	<artifactId>GSARTS</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>eam</name>
-	<description>eam backend</description>
+	<name>GSARTS</name>
+	<description>GSARTS backend</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -79,6 +79,14 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 			<optional>true</optional>
+		</dependency>
+
+
+		<!-- https://mvnrepository.com/artifact/commons-net/commons-net -->
+		<dependency>
+			<groupId>commons-net</groupId>
+			<artifactId>commons-net</artifactId>
+			<version>3.6</version>
 		</dependency>
 
 	</dependencies>
