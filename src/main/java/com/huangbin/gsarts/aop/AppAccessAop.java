@@ -26,7 +26,7 @@ public class AppAccessAop {
     @Autowired
     SysParamsService sysParamsService;
 
-    @After("execution(* com.huangbin.gsarts.controller.*.*Controller.index(..))||execution(* com.huangbin.gsarts.controller.*.*Controller.index3d(..))||execution(* com.yhb.controller.*.*Controller.list(..))")
+    @After("execution(* com.huangbin.gsarts.controller.*.*Controller.index(..))")
     public void writeAccessLog(JoinPoint point) throws InterruptedException {
 
 

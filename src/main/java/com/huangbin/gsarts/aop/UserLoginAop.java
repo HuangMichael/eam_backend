@@ -29,12 +29,12 @@ public class UserLoginAop {
      * @param joinPoint   结合点
      * @param loginResult 登录结果
      */
-    @AfterReturning(value = "execution(* com.yhb.controller.LoginController.login(..))", returning = "loginResult")
-    public void doAfterReturningAdvice(JoinPoint joinPoint, Object loginResult) {
+//    @AfterReturning(value = "execution(* com.huangbin.gsarts.controller.LoginController.login(..))", returning = "loginResult")
+//    public void doAfterReturningAdvice(JoinPoint joinPoint, Object loginResult) {
 
-        //设置日志开关
+    //设置日志开关
 
-        //从系统参数表中查询是否需要记录访问日志
+    //从系统参数表中查询是否需要记录访问日志
 //        SysParams sysParams = sysParamsService.findByParamName("DATA_TRANSFORM_LOG_STATUS");
 //        String logaable = sysParams.getParamValue();
 //        if (!logaable.equals("1")) {
@@ -55,7 +55,7 @@ public class UserLoginAop {
 //        userLog.setOperationTime(new Date());
 //        userLog.setStatus(result ? "登录成功" : "登录失败");
 //        userLogService.createUserLog(userLog);
-    }
+//    }
 
 
     /**
@@ -63,7 +63,7 @@ public class UserLoginAop {
      *
      * @param joinPoint
      */
-    @Before(value = "execution(* com.yhb.controller.LoginController.logout(..))")
+    @Before(value = "execution(* com.huangbin.gsarts.controller.LoginController.logout(..))")
     public void doBeforeAdvice(JoinPoint joinPoint) {
 //        //获取目标方法的参数信息
 //        Object[] obj = joinPoint.getArgs();
