@@ -17,8 +17,7 @@ import java.util.Date;
 @Data
 public class UserLog implements Serializable {
     @Id
-    @SequenceGenerator(name = "USER_LOG_GENERATOR", sequenceName = "SEQ_USER_LOG", allocationSize = 1, initialValue = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "USER_LOG_GENERATOR")
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id", length = 11, nullable = false)
     private Long id; //序号
 

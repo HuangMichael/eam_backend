@@ -27,6 +27,15 @@ public class UserService {
     }
 
 
+
+    /**
+     * @return
+     */
+    public List<User> findByUserNameAndPassword(String userName,String password) {
+        return userRepository.findAll();
+    }
+
+
     /**
      * @param id 用户ID
      * @return 根据用户id查询

@@ -16,8 +16,7 @@ import java.util.Date;
 public class DataTransformLog implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
-    @SequenceGenerator(name = "DATA_TRANSFORM_LOG_GENERATOR", sequenceName = "SEQ_DATA_TRANSFORM_LOG", allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "DATA_TRANSFORM_LOG_GENERATOR")
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id", length = 11, nullable = false)
     private Long id; //序号
 

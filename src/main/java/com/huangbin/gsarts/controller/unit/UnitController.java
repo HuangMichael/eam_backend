@@ -42,8 +42,9 @@ public class UnitController extends BaseController {
     /**
      * @return 保存的单位信息
      */
-    @RequestMapping(value = "/save", method = RequestMethod.PUT)
-    public Unit save(@RequestParam("unit") Unit unit) {
+    @RequestMapping(value = "/save", method = RequestMethod.POST)
+    @ResponseBody
+    public Unit save(@RequestBody Unit unit) {
         log.info("unit----------------" + unit.toString());
         return unitService.save(unit);
     }

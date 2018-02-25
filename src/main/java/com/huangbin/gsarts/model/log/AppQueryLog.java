@@ -16,8 +16,7 @@ import java.util.Date;
 public class AppQueryLog implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
-    @SequenceGenerator(name = "APP_QUERY_LOG_GENERATOR", sequenceName = "SEQ_APP_QUERY_LOG", allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "APP_QUERY_LOG_GENERATOR")
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id", length = 11, nullable = false)
     private Long id; //序号
 

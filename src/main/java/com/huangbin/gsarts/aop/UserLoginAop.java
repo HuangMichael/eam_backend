@@ -63,20 +63,20 @@ public class UserLoginAop {
      *
      * @param joinPoint
      */
-    @Before(value = "execution(* com.huangbin.gsarts.controller.LoginController.logout(..))")
-    public void doBeforeAdvice(JoinPoint joinPoint) {
-//        //获取目标方法的参数信息
-//        Object[] obj = joinPoint.getArgs();
-//        HttpServletRequest request = (HttpServletRequest) obj[0];
-//        String ip = request.getRemoteHost();
-//        HttpSession session = request.getSession();
-//        User user = (User) session.getAttribute("user");
-//        UserLog userLog = new UserLog();
-//        userLog.setUserName(user.getUserName());
-//        userLog.setLoginIp(ip);
-//        userLog.setOperation("退出");
-//        userLog.setOperationTime(new Date());
-//        userLog.setStatus("退出系统");
-//        userLogService.createUserLog(userLog);
-    }
+//    @Before(value = "execution(* com.huangbin.gsarts.controller.LoginController.logout(..))")
+//    public void doBeforeAdvice(JoinPoint joinPoint) {
+////        //获取目标方法的参数信息
+////        Object[] obj = joinPoint.getArgs();
+////        HttpServletRequest request = (HttpServletRequest) obj[0];
+////        String ip = request.getRemoteHost();
+////        HttpSession session = request.getSession();
+////        User user = (User) session.getAttribute("user");
+////        UserLog userLog = new UserLog();
+////        userLog.setUserName(user.getUserName());
+////        userLog.setLoginIp(ip);
+////        userLog.setOperation("退出");
+////        userLog.setOperationTime(new Date());
+////        userLog.setStatus("退出系统");
+////        userLogService.createUserLog(userLog);
+//    }
 }

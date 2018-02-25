@@ -1,21 +1,18 @@
 package com.huangbin.gsarts.model.menu;
 
 /**
- * Created by 路丽民 on 2017/5/7 0007.
+ * Created by huangbin on 2017/5/7 0007.
  */
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Data;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.HashSet;
-import java.util.Set;
 
 /**
  * 菜单信息表
  *
- * @author lulimin
+ * @author HUANGBIN
  */
 @Entity
 @Table(name = "T_MENU")
@@ -55,16 +52,16 @@ public class Menu implements Serializable {
     @Column(length = 11, nullable = false)
     private Long menuLevel; //菜单级别
 
-    @JsonBackReference
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "parent_id", referencedColumnName = "id")
-    private Menu parent; //上级菜单
+//    @JsonBackReference
+//    @ManyToOne(fetch = FetchType.LAZY)
+//    @JoinColumn(name = "parent_id", referencedColumnName = "id")
+//    private Menu parent; //上级菜单
 
 
-    @JsonBackReference
-    @OneToMany
-    @JoinColumn(name = "id")
-    private Set<Menu> menus = new HashSet<Menu>();
+//    @JsonBackReference
+//    @OneToMany
+//    @JoinColumn(name = "id")
+//    private Set<Menu> menus = new HashSet<Menu>();
 
     @Column(length = 11, nullable = false)
     private Long sortNo; //排序
