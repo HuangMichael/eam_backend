@@ -15,7 +15,6 @@ public class SiteService {
     @Autowired
     SiteRepository siteRepository;
 
-
     /**
      * @param site
      * @return 保存所有的站点
@@ -24,7 +23,6 @@ public class SiteService {
         return siteRepository.save(site);
     }
 
-
     /**
      * @param id 根据ID删除
      */
@@ -32,8 +30,6 @@ public class SiteService {
         siteRepository.delete(id);
 
     }
-
-
     /**
      * @return 查询所有的站点
      */
