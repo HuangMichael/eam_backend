@@ -47,10 +47,21 @@ public class RoleController extends BaseController {
     /**
      * @return 给角色添加用户
      */
-    @RequestMapping(value = "/addUsers", method = RequestMethod.GET)
+    @RequestMapping(value = "/addUsers", method = RequestMethod.POST)
     public ReturnObject addUsers(@RequestParam String userIds) {
         return roleService.addUsers(userIds);
     }
+
+
+
+    /**
+     * @return 给角色添加用户
+     */
+    @RequestMapping(value = "/addResources", method = RequestMethod.POST)
+    public ReturnObject addResources(@RequestParam String userIds) {
+        return roleService.addResources(userIds);
+    }
+
 
 
 }

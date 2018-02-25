@@ -49,4 +49,14 @@ public class RoleService {
 
         return commonDataService.getReturnType(true, "", "");
     }
+
+
+    /**
+     * @param resourceIds 资源id
+     * @ 返回资源添加结果
+     */
+    public ReturnObject addResources(String resourceIds) {
+        String[] rids = resourceIds.split(",");
+        return commonDataService.getReturnType(true, "", "");
+    }
 }
